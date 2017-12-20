@@ -1,41 +1,33 @@
-#include <sys/types.h>
-#include <sys/ipc.h>
-#include <sys/shm.h>
-#include <stdio.h>
-#include <string.h>
+#include <iostream>
+#include <boost/interprocess/managed_shared_memory.hpp>
+#include <boost/interprocess/offset_ptr.hpp>
 
-#define CONSTANTE_DA_CHAVE 5678
-#include "RobotMsg.h"
+using namespace boost::interprocess;
 
-//struct RobotMsg{
-//    char process[20]; //--Nome do processo!
-//    int nameOfRobot;//--Numero do Robô!
-//    float velX;//--Velocidade em X
-//    float velY;//--Velocidade em Y
-//    int chute;//--Chute (sim ou não);
-//    int status;//--"reserva técnica", se necessário, usa-se esse espaço.
-//};
+#define AI_SHARED_MEMORY_NAME "AI"
+#define AI_SHARED_MEMORY_SIZE 65536
+#define VELOCITIES_MEMORY_NAME "velocities"
+#define N_PLAYERS 3
+
+
+typedef struct
+{
+    double x;
+    double y;
+    double ang;
+}velocity;
+
 
 class MemoryClient{
 private:
-        struct RobotMsg *_pacote;
-        char _nameProcess [20];
-        size_t _shmsize;
-        int _shmid;
-        key_t _key;
-
-        void _setup(int nameIN);
-        void _unSetup();
+        managed_shared_memory* shared_memory;
+        velocity* shared_memory_velocities;
 public:
         MemoryClient();
-        MemoryClient(char nameIN[20]);
-        ~MemoryClient(){};
+        ~MemoryClient();
 
-        int getID();
-        void setNameOfProcess(char nameIN[20]);
         void sendVelX(int nameOfRobotIN, float velXIN);
         void sendVelY(int nameOfRobotIN, float velYIN);
-        void sendChute(int nameOfRobotIN, int chuteIN);
-        void sendStatus(int nameOfRobotIN, int statusIN);
+        void sendVelAng(int nameOfRobotIN, float velAng);
 };
 

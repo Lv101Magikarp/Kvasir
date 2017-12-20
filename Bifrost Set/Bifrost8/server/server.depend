@@ -747,3 +747,209 @@
 
 1510789457 /home/alefe/Desktop/versão 1.2/Bifrost Set/Bifrost8/server/ServerConstantes.h
 
+1510797428 source:/home/odin/Desktop/Kvasir/Bifrost Set/Bifrost8/server/display/Display.cpp
+	"Display.h"
+
+1510797428 /home/odin/Desktop/Kvasir/Bifrost Set/Bifrost8/server/display/Display.h
+	<stdio.h>
+	<string.h>
+	"Colors.h"
+	"../ServerConstantes.h"
+
+1510797428 /home/odin/Desktop/Kvasir/Bifrost Set/Bifrost8/server/display/Colors.h
+
+1510950147 /home/odin/Desktop/Kvasir/Bifrost Set/Bifrost8/server/ServerConstantes.h
+
+1510797428 source:/home/odin/Desktop/Kvasir/Bifrost Set/Bifrost8/server/listaEncadeada/ListaRobos.cpp
+	"ListaRobos.h"
+
+1510797428 /home/odin/Desktop/Kvasir/Bifrost Set/Bifrost8/server/listaEncadeada/ListaRobos.h
+	"Robo.h"
+
+1510797428 /home/odin/Desktop/Kvasir/Bifrost Set/Bifrost8/server/listaEncadeada/Robo.h
+	"MemoryServer.h"
+	"RobotMsg.h"
+
+1510797428 /home/odin/Desktop/Kvasir/Bifrost Set/Bifrost8/server/listaEncadeada/MemoryServer.h
+	<sys/types.h>
+	<sys/ipc.h>
+	<sys/shm.h>
+	<stdio.h>
+	<string.h>
+	"RobotMsg.h"
+	"../ServerConstantes.h"
+
+1510797428 /home/odin/Desktop/Kvasir/Bifrost Set/Bifrost8/server/listaEncadeada/RobotMsg.h
+
+1510797428 source:/home/odin/Desktop/Kvasir/Bifrost Set/Bifrost8/server/listaEncadeada/MemoryServer.cpp
+	"MemoryServer.h"
+
+1510797428 source:/home/odin/Desktop/Kvasir/Bifrost Set/Bifrost8/server/listaEncadeada/Robo.cpp
+	"Robo.h"
+
+1510797428 source:/home/odin/Desktop/Kvasir/Bifrost Set/Bifrost8/server/main.cpp
+	"Principal.h"
+
+1510797428 /home/odin/Desktop/Kvasir/Bifrost Set/Bifrost8/server/Principal.h
+	<unistd.h>
+	"display/Display.h"
+	"listaEncadeada/ListaRobos.h"
+	"relacaoRobos/RelacaoRobos.h"
+	"listaEncadeada/Robo.h"
+	"radio/Radio.h"
+	"radio/XbeeAPI.h"
+	"string.h"
+	<iostream>
+
+1510797428 /home/odin/Desktop/Kvasir/Bifrost Set/Bifrost8/server/relacaoRobos/RelacaoRobos.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../ServerConstantes.h"
+
+1510797428 /home/odin/Desktop/Kvasir/Bifrost Set/Bifrost8/server/radio/Radio.h
+	<stdlib.h>
+	<stdio.h>
+	<sstream>
+	<string>
+	<iostream>
+	"rs232.h"
+	"../ServerConstantes.h"
+
+1510797428 /home/odin/Desktop/Kvasir/Bifrost Set/Bifrost8/server/radio/rs232.h
+	<stdio.h>
+	<string.h>
+	<termios.h>
+	<sys/ioctl.h>
+	<unistd.h>
+	<fcntl.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<limits.h>
+	<windows.h>
+
+1510797428 /home/odin/Desktop/Kvasir/Bifrost Set/Bifrost8/server/radio/XbeeAPI.h
+	"../ServerConstantes.h"
+
+1510797428 source:/home/odin/Desktop/Kvasir/Bifrost Set/Bifrost8/server/Principal.cpp
+	"Principal.h"
+
+1510797428 source:/home/odin/Desktop/Kvasir/Bifrost Set/Bifrost8/server/radio/Radio.cpp
+	"Radio.h"
+
+1510797428 source:/home/odin/Desktop/Kvasir/Bifrost Set/Bifrost8/server/radio/rs232.cpp
+	"rs232.h"
+
+1510797428 source:/home/odin/Desktop/Kvasir/Bifrost Set/Bifrost8/server/radio/XbeeAPI.cpp
+	"XbeeAPI.h"
+
+1510797428 source:/home/odin/Desktop/Kvasir/Bifrost Set/Bifrost8/server/relacaoRobos/RelacaoRobos.cpp
+	"RelacaoRobos.h"
+
+1510790228 source:/home/laser/Desktop/Kvasir/Bifrost Set/Bifrost8/server/display/Display.cpp
+	"Display.h"
+
+1510790228 /home/laser/Desktop/Kvasir/Bifrost Set/Bifrost8/server/display/Display.h
+	<stdio.h>
+	<string.h>
+	"Colors.h"
+	"../ServerConstantes.h"
+
+1510790228 /home/laser/Desktop/Kvasir/Bifrost Set/Bifrost8/server/display/Colors.h
+
+1510942946 /home/laser/Desktop/Kvasir/Bifrost Set/Bifrost8/server/ServerConstantes.h
+
+1512125184 source:/home/laser/Desktop/Kvasir/Bifrost Set/Bifrost8/server/listaEncadeada/ListaRobos.cpp
+	"ListaRobos.h"
+
+1510790228 /home/laser/Desktop/Kvasir/Bifrost Set/Bifrost8/server/listaEncadeada/ListaRobos.h
+	"Robo.h"
+
+1512125184 /home/laser/Desktop/Kvasir/Bifrost Set/Bifrost8/server/listaEncadeada/Robo.h
+	"VelocitiesLoader.hpp"
+	"RobotMsg.h"
+
+1510790228 /home/laser/Desktop/Kvasir/Bifrost Set/Bifrost8/server/listaEncadeada/MemoryServer.h
+	<sys/types.h>
+	<sys/ipc.h>
+	<sys/shm.h>
+	<stdio.h>
+	<string.h>
+	"RobotMsg.h"
+	"../ServerConstantes.h"
+
+1510790228 /home/laser/Desktop/Kvasir/Bifrost Set/Bifrost8/server/listaEncadeada/RobotMsg.h
+
+1510790228 source:/home/laser/Desktop/Kvasir/Bifrost Set/Bifrost8/server/listaEncadeada/MemoryServer.cpp
+	"MemoryServer.h"
+
+1512142651 source:/home/laser/Desktop/Kvasir/Bifrost Set/Bifrost8/server/listaEncadeada/Robo.cpp
+	"Robo.h"
+
+1510790228 source:/home/laser/Desktop/Kvasir/Bifrost Set/Bifrost8/server/main.cpp
+	"Principal.h"
+
+1512126824 /home/laser/Desktop/Kvasir/Bifrost Set/Bifrost8/server/Principal.h
+	<unistd.h>
+	"display/Display.h"
+	"listaEncadeada/ListaRobos.h"
+	"relacaoRobos/RelacaoRobos.h"
+	"listaEncadeada/Robo.h"
+	"radio/Radio.h"
+	"radio/XbeeAPI.h"
+	"string.h"
+	<iostream>
+
+1510790228 /home/laser/Desktop/Kvasir/Bifrost Set/Bifrost8/server/relacaoRobos/RelacaoRobos.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"../ServerConstantes.h"
+
+1510790228 /home/laser/Desktop/Kvasir/Bifrost Set/Bifrost8/server/radio/Radio.h
+	<stdlib.h>
+	<stdio.h>
+	<sstream>
+	<string>
+	<iostream>
+	"rs232.h"
+	"../ServerConstantes.h"
+
+1510790228 /home/laser/Desktop/Kvasir/Bifrost Set/Bifrost8/server/radio/rs232.h
+	<stdio.h>
+	<string.h>
+	<termios.h>
+	<sys/ioctl.h>
+	<unistd.h>
+	<fcntl.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<limits.h>
+	<windows.h>
+
+1510790228 /home/laser/Desktop/Kvasir/Bifrost Set/Bifrost8/server/radio/XbeeAPI.h
+	"../ServerConstantes.h"
+
+1512127026 source:/home/laser/Desktop/Kvasir/Bifrost Set/Bifrost8/server/Principal.cpp
+	"Principal.h"
+
+1510790228 source:/home/laser/Desktop/Kvasir/Bifrost Set/Bifrost8/server/radio/Radio.cpp
+	"Radio.h"
+
+1510790228 source:/home/laser/Desktop/Kvasir/Bifrost Set/Bifrost8/server/radio/rs232.cpp
+	"rs232.h"
+
+1510790228 source:/home/laser/Desktop/Kvasir/Bifrost Set/Bifrost8/server/radio/XbeeAPI.cpp
+	"XbeeAPI.h"
+
+1510790228 source:/home/laser/Desktop/Kvasir/Bifrost Set/Bifrost8/server/relacaoRobos/RelacaoRobos.cpp
+	"RelacaoRobos.h"
+
+1510062566 /home/laser/Desktop/Kvasir/Bifrost Set/Bifrost8/server/listaEncadeada/VelocitiesLoader.hpp
+	<iostream>
+	<boost/interprocess/managed_shared_memory.hpp>
+	<boost/interprocess/offset_ptr.hpp>
+
+1512126555 source:/home/laser/Desktop/Kvasir/Bifrost Set/Bifrost8/server/listaEncadeada/VelocitiesLoader.cpp
+	"VelocitiesLoader.hpp"
+

@@ -8,7 +8,7 @@
 class Principal{
 private:
     MousePointer _mouse;
-    MemoryClient _client;
+    MemoryClient* _client;
     void _transmitir();
 public:
     Principal();
@@ -17,8 +17,9 @@ public:
 #endif
 
 Principal::Principal(){
-    _client.setNameOfProcess("MouseControl");
+        _client = new MemoryClient();
         _transmitir();
+        delete _client;
 }
 
 void Principal::_transmitir(){
@@ -53,7 +54,8 @@ void Principal::_transmitir(){
         velX = (x * VEL_MAX)/300.0;
         velY = (y * VEL_MAX)/300.0;
         printf("Velocidades: %f,%f\n", velX, velY);
-        _client.sendVelX(robo, velX);
-        _client.sendVelY(robo, velY);
+        _client->sendVelX(robo, velX);
+        _client->sendVelY(robo, velY);
+        _client->sendVelAng(robo, 0);
     }
 }

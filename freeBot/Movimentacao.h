@@ -1,36 +1,33 @@
 #ifndef _MOVIMENTACAO_H_
 #define _MOVIMENTACAO_H_
 
-#include <math.h> 
-#include "Constantes.h"
+#include <math.h>
+#include "BotConstantes.h"
 #include "ServoRotativo.h"
 
 struct VelocidadeDosMotores{
-  float motor1;
-  float motor2;
-  float motor3;
-  float motor4;
-  };
+    float motor1;
+    float motor2;
+    float motor3;
+    float motor4;
+};
 
 class Movimentacao{
-    private:
-        Constantes _constantes;
-        Pinagem _pinagem;
-        ServoRotativo _motor1;
-        ServoRotativo _motor2;
-        ServoRotativo _motor3;
-        ServoRotativo _motor4;
-    
-        void _calculo(float velXIN, float velYIN, float w);
-	      VelocidadeDosMotores _velocidade; 
-	
-    public:
-	//--Métodos:
-        void mover(float velXIN, float velYIN, float w);
- 	
-	//--Construtoras e Destrutoras	
-	Movimentacao();
-	~Movimentacao(){};
+private:
+    ServoRotativo* motor1;
+    ServoRotativo* motor2;
+    ServoRotativo* motor3;
+    ServoRotativo* motor4;
+
+    void calculo(float velX, float velY, float w);
+    VelocidadeDosMotores velocidade;
+
+public:
+    Movimentacao();
+    ~Movimentacao() {};
+    void mover(float velX, float velY, float w);
+
+
 };
 #endif
 

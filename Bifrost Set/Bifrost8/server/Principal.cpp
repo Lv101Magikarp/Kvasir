@@ -1,4 +1,5 @@
 #include "Principal.h"
+using namespace std;
 Principal::Principal()
 {
     display = new Display();
@@ -6,6 +7,7 @@ Principal::Principal()
     arquivo = new RelacaoRobos();
     radio = new Radio();
     xbee = new XbeeAPI();
+    acessado = NULL;
     carregarRobos();
     display->addLineStatus("O programa Esta travado com hex fixos!!");
     while(1)
@@ -19,15 +21,17 @@ Principal::Principal()
 void Principal::checarRobosAtivos()
 {
     char auxDisplay[300];
+    acessado = vetorRobos->percorreLista();
     sprintf(auxDisplay,"Robo\t|Endereco MAC\t|Velocidade X\t|Velocidade Y\t|Velocidade Ang\t|Escrito por\t|");
     display->addLineRobos(auxDisplay);
 
-    acessado = vetorRobos->percorreLista();
-    while(acessado != 0)
+
+    while(acessado != NULL)
     {
         sprintf(auxDisplay,"%d\t| %s\t| %.2fm/s\t| %.2fm/s\t| %.2fangs/s\t|%s\t|", acessado->getNome(), acessado->getMAC(), acessado->getVelX(), acessado->getVelY(), acessado->getVelAng(), acessado->getProcessName());
         display->addLineRobos(auxDisplay);
         acessado = vetorRobos->percorreLista();
+
     }
 }
 
@@ -37,13 +41,14 @@ void Principal::transmitir()
     char auxDisplay[300];
     char auxDisplay1[300];
     acessado = vetorRobos->percorreLista();
-    while(acessado != 0)
+    while(acessado != NULL)
     {
         sprintf(auxDisplay,"Transmitindo para %s\t: Vx:%.2fm/s, Vy:%.2fm/s %.2fangm/s", acessado->getMAC(),
                 acessado->getVelX(), acessado->getVelY(), acessado->getVelAng());
-        auxXbee = xbee->montarPacoteRS232(acessado->getMAC(), acessado->getVelX(), acessado->getVelY(), 0x00, 0);
+        auxXbee = xbee->montarPacoteRS232(acessado->getMAC(), acessado->getVelX(), acessado->getVelY(),acessado->getVelAng(), 0);
         radio->send(auxXbee);
-        usleep(10000);
+
+        usleep(100);
 
         sprintf(auxDisplay,"Transmitindo para '%d' com MAC '%s' o pacote ", acessado->getNome(),acessado->getMAC());
         sprintf(auxDisplay1," %.2x %.2x %.2x %.2x %.2x %.2x %.2x %.2x %.2x %.2x %.2x %.2x %.2x %.2x",

@@ -1,0 +1,17 @@
+#ifndef BUFFER_H
+#define BUFFER_H
+
+class Buffer{
+    int amount;
+    char byte;
+    Buffer* next;
+public:
+    Buffer();
+    Buffer addByte(char _byte);
+    Buffer removeByte();
+    int getSize();
+    int getByte();
+    ~Buffer(){};
+};
+
+#endif

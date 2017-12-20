@@ -1,16 +1,12 @@
 #include "Robo.h"
-
-Robo::Robo()
-{
-    ptrProx = NULL;
-}
+using namespace std;
 
 Robo::Robo(int nameIN, char* MACIN)
 {
+    ptrProx = NULL;
     nome = nameIN;
     strcpy(MAC,MACIN);
-    servidor = new MemoryServer("SERVIDOR",nome);//--Cria o bloco de memoria pro robo representado por tal número
-    mensagem = servidor->getMsgSpace();//-- atribui o espaço reservado na memória ao robô
+    loader = VelocitiesLoader::getInstance();
 }
 
 void Robo::setProximoRobo(Robo* roboIN)
@@ -30,17 +26,20 @@ int Robo::getNome()
 
 float Robo::getVelX()
 {
-    return mensagem->velX;
+    loader->updateVelocities();
+    return loader->getVelX(nome);
 }
 
 float Robo::getVelY()
 {
-    return mensagem->velY;
+    loader->updateVelocities();
+    return loader->getVelY(nome);
 }
 
 float Robo::getVelAng()
 {
-    return mensagem->velAng;
+    loader->updateVelocities();
+    return loader->getVelAng(nome);
 }
 
 char *Robo::getMAC()
@@ -50,5 +49,5 @@ char *Robo::getMAC()
 
 char *Robo::getProcessName()
 {
-    return servidor->getNameOfProcess();
+
 }

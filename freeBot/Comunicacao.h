@@ -1,25 +1,22 @@
 #ifndef _COMUNICACAO_H_
 #define _COMUNICACAO_H_
 
-#include"XbeeRobo.h"
-#include "Constantes.h"
+#include "XbeeRobo.h"
+#include "BotConstantes.h"
 
 class Comunicacao{
-	private:
-    Constantes _constantes;
-    XbeeRobo _radio;
-    float _velocidadeEixoX;
-    float _velocidadeEixoY;
-    float _velAng;
-	public:
-  //--Obter Dados recebidos:
-      float velocidadeEixoX();
-      float velocidadeEixoY();
-      float velocidadeAng();
-      void aguardarDados();
-      //void teste();
-	//--Construtoras e Destrutoras
-	Comunicacao();
-	~Comunicacao(){};
+private:
+    XbeeRobo* radio;
+    float velocidadeEixoX;
+    float velocidadeEixoY;
+    float velAng;
+public:
+    Comunicacao();
+    //--Obter Dados recebidos:
+    float getVelocidadeEixoX();
+    float getVelocidadeEixoY();
+    float getVelocidadeAng();
+    void aguardarDados();
+    ~Comunicacao() {};
 };
 #endif

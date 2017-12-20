@@ -1,18 +1,17 @@
 #ifndef _ROBO_H_
 #define _ROBO_H_
 
-#include "MemoryServer.h"
+#include "VelocitiesLoader.hpp"
 #include "RobotMsg.h"
 
 class Robo{
 private:
     int nome;
-    MemoryServer* servidor;
+    VelocitiesLoader *loader;
     RobotMsg* mensagem;
-    char MAC[20];
+    char MAC[30];
     Robo* ptrProx;
 public:
-    Robo();
     Robo(int nameIN, char* MACIN);
 
     Robo* getProximoRobo();

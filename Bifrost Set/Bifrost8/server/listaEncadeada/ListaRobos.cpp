@@ -2,16 +2,16 @@
 
 ListaRobos::ListaRobos()
 {
-    primeiroRobo = 0;
+    primeiroRobo = NULL;
     tamanhoDaEstrutura = 0;
-    roboExibido = 0;
-    roboAtual=0;
+    roboExibido = NULL;
+    roboAtual=NULL;
 }
 
 ListaRobos::~ListaRobos()
 {
     Robo* aux;
-    while(primeiroRobo->getProximoRobo() != 0) //--Enquanto o primeiro objeto possuir vizinho
+    while(primeiroRobo->getProximoRobo() != NULL) //--Enquanto o primeiro objeto possuir vizinho
     {
         {
             aux = primeiroRobo->getProximoRobo();//--Pega o vizinho
@@ -26,7 +26,7 @@ ListaRobos::~ListaRobos()
 
 void ListaRobos::adicionarRobo(int nameIN, char* MACIN)
 {
-    if(primeiroRobo == 0)
+    if(primeiroRobo == NULL)
     {
         primeiroRobo = new Robo(nameIN, MACIN);
         roboAtual = primeiroRobo;
@@ -42,7 +42,7 @@ void ListaRobos::adicionarRobo(int nameIN, char* MACIN)
 
 Robo* ListaRobos::percorreLista()
 {
-    if(roboExibido == 0)
+    if(roboExibido == NULL)
         roboExibido = primeiroRobo;
     else
         roboExibido = roboExibido->getProximoRobo();

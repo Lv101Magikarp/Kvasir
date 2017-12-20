@@ -1,8 +1,23 @@
 #ifndef _CONSTANTES_H_
 #define _CONSTANTES_H_
 
-class Constantes{
-public:
+#define ATIVAR_TESTE 0
+#define VELOCIDADE_MAXIMA 0.3
+#define	PI 3.1415926536
+#define MOTOR1_PINO 4
+#define MOTOR2_PINO 7
+#define MOTOR3_PINO 10
+#define MOTOR4_PINO 13
+#define
+#define
+#define
+#define
+#define
+#define
+#define
+#define
+#define
+#define
     const float VELOCIDADE_MAXIMA = 0.3; //--Velocidade Máxima atingida pelo motor + roda
     //const int ATIVAR_CALIBRAGEM = 1; //--Comportamento do robo: (1)Calibragem, (0)Habilita os Motores à serem controlados
                                       //--PS: A calibragem DEVE SER realizada com o XBee desligado!!
